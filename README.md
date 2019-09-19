@@ -5,13 +5,11 @@
 ### Author: Jose Ojeda
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
+* [submission PR](https://github.com/jose-401-advanced-javascript/async/pull/1)
+* [travis](https://travis-ci.com/jose-401-advanced-javascript/async)
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
+
 
 ### Setup
 
