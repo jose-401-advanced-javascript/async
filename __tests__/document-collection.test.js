@@ -65,19 +65,11 @@ describe('Document Collection', () => {
 
   describe('getAll method', () => {
 
-    it('gets file by id', () => {      
-      const id = 'test';
-      const documentCollection = new DocumentCollection('document');
-      const readPromise = Promise.resolve('{"name":"jose","id":"test"}');
-      readFile.mockResolvedValue(readPromise);
-
-      return documentCollection.get(id)
-        .then(() => {
-
-          const readCalls = readFile.mock.calls;
-          expect(readCalls.length).toBe(1); 
-          expect(readCalls[0][0]).toBe('./document/test.json');
-        });
+    it('gets all files', () => {      
+     
+      const readdirCall = readdir.mock.calls;
+      console.log(readdirCall);
+      
     });
   });
 });
