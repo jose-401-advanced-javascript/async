@@ -1,0 +1,34 @@
+{
+  "name": "01-node-ecosystem",
+  "version": "0.0.1",
+  "description": "this will be sooooo cool",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test-watch": "npm run test -- --watch",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
+    "lint": "eslint '**/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.4.0",
+    "jsdoc": "^3.6.3",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jose-401-advanced-javascript/async.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jose-401-advanced-javascript/async/issues"
+  },
+  "homepage": "https://github.com/jose-401-advanced-javascript/async#readme"
+}
