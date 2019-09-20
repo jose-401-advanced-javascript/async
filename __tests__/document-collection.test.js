@@ -65,11 +65,26 @@ describe('Document Collection', () => {
 
   describe('getAll method', () => {
 
-    it('gets all files', () => {      
-     
-      const readdirCall = readdir.mock.calls;
-      console.log(readdirCall);
+    it('gets all files', () => {
+      const obj = { name: 'jose', id: 'test' };
       
+      const readPromise = Promise.resolve(JSON.stringify(obj));
+      readFile.mockReturnValueOnce(readPromise);
+
+      const readdirPromise = Promise.resolve(['test.json']);
+      readdir.mockReturnValueOnce(readdirPromise);
+
+      const documentCollection = new DocumentCollection('document');
+
+      return documentCollection.getAll()
+        .then(array => {
+
+          const readCalls = readFile.mock.calls;
+          const readDirCall = readdir.mock.calls;
+          expect(readDirCall[0][0]).toBe('document'); 
+          expect(readCalls[1][0]).toBe('./document/test.json');
+          expect(array[0].id).toBe(obj.id);
+        });      
     });
   });
 });
